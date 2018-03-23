@@ -1,3 +1,5 @@
+</div> <!-- Cerramos class container -->
+
 <br>
 <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
 <span>Nidea, marca registrada.</span>

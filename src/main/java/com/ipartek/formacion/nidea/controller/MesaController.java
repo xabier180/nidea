@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ipartek.formacion.nidea.pojo.Material;
 import com.ipartek.formacion.nidea.pojo.Mesa;
 
 /**
@@ -24,34 +25,42 @@ public class MesaController extends HttpServlet {
 
 		Mesa m = new Mesa();
 
-		// Recoger parametros *** SIEMPRE String ***
+		// recoger parametros *** SIEMPRE String ***
 		String sPatas = request.getParameter("patas");
-		String sDimension = request.getParameter("dimension");
-		String bColor = request.getParameter("color-checkbox");
 
 		// Si parametros no son NULL recoger y crear mesa a medida
 		if (sPatas != null) {
-			int patas = Integer.parseInt(sPatas);
 
+			int patas = Integer.parseInt(sPatas);
 			m.setNumeroPatas(patas);
 
-			int dimension = Integer.parseInt(sDimension);
-
+			String sDimnesion = request.getParameter("dimension");
+			int dimension = Integer.parseInt(sDimnesion);
 			m.setDimension(dimension);
+
+			String sCustom = request.getParameter("custom");
+			if (sCustom == null) {
+				m.setCustom(false);
+			} else { // viene 'on'
+				m.setCustom(true);
+
+				// color
+				String color = request.getParameter("color");
+				m.setColor(color);
+			}
+
+			String sMaterialId = request.getParameter("material");
+			int idMaterial = Integer.parseInt(sMaterialId);
+			m.setMaterial(new Material(idMaterial));
+
 		}
 
-		int color = Integer.parseInt(bColor);
-
-		if (bColor.equals("false")) {
-			m.setColor(color);
-		}
-
-		// Crear mesa
-
-		// Enviar atributos a la JSP
+		// enviar atributos a la JSP
 		request.setAttribute("mesa", m);
+		request.setAttribute("materiales", Material.NOMBRES);
+		request.setAttribute("materialesCodigo", Material.IDS);
 
-		// Ir a la JSP
+		// ir a la JSP
 		request.getRequestDispatcher("mesa.jsp").forward(request, response);
 
 	}
