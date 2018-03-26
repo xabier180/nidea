@@ -4,17 +4,9 @@
 <jsp:include page="/templates/head.jsp"></jsp:include>
 <jsp:include page="/templates/navbar.jsp"></jsp:include> 
 
-<%
-	String msg = (String)request.getAttribute("msg");
-	if (msg != null){
-%>
-		<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <%=msg %>
-</div>
-<% 
-	}
-%>
+<jsp:include page="/templates/alerts.jsp"></jsp:include> 
+
+
 
 
 <h2>Calculadora</h2>

@@ -2,6 +2,7 @@
 
 <jsp:include page="templates/head.jsp"></jsp:include>
 <jsp:include page="templates/navbar.jsp"></jsp:include>
+<jsp:include page="templates/alerts.jsp"></jsp:include>
 
 <%
 	// recoger atributo del controlador, si es que existe

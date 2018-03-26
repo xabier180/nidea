@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       <li><a href="index.jsp">
-	  	<img src="img/logo.png" class="logo" alt="Logo Nidea">
+	  	<img src="img/logo.png" class="logo" alt="Logo Nidea" style="width:100px; height:50px; padding: 0px">
 	  </a>	</li>
         <li class="active"><a href="index.jsp">Inicio <span class="sr-only">(current)</span></a></li>
         <li><a href="generar-mesa">Precio mesa</a></li>

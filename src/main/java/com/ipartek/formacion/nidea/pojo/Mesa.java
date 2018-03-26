@@ -68,13 +68,21 @@ public class Mesa implements Cloneable {
 	}
 
 	/**
-	 * Si numeroPatas < 0 asignamos valor 1, else numeroPatas
+	 * Seteamos el numero de patas de la mesa
 	 * 
 	 * @param numeroPatas
 	 *            int
+	 * @throws MesaException
+	 *             lanza Exception si numero de patas <=0
 	 */
-	public void setNumeroPatas(int numeroPatas) {
-		this.numeroPatas = (numeroPatas <= 0) ? 1 : numeroPatas;
+	public void setNumeroPatas(int numeroPatas) throws com.ipartek.formacion.nidea.pojo.MesaException {
+
+		if (numeroPatas <= 0) {
+			throw new MesaException(MesaException.MENSAJE_PATAS);
+		}
+
+		this.numeroPatas = numeroPatas;
+
 	}
 
 	public int getDimension() {
