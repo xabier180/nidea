@@ -14,14 +14,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+      <li><a href="index.jsp">
+	  	<img src="img/logo.png" class="logo" alt="Logo Nidea">
+	  </a>	</li>
         <li class="active"><a href="index.jsp">Inicio <span class="sr-only">(current)</span></a></li>
         <li><a href="generar-mesa">Precio mesa</a></li>
-        <li><a href="realizar-calculo">Calculadora</a></li>
+        <li><a href="calculadora">Calculadora</a></li>
        
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
+        <li><a class="btn btn-outline-primary" href="#">Login</a></li>
         
       </ul>
     </div><!-- /.navbar-collapse -->

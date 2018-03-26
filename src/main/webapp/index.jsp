@@ -15,7 +15,7 @@
 <p> <%=hora%> </p>
 
 <a href="generar-mesa"> ¿Quieres comprar una mesa? </a>
-<a href="realizar-calculo"> ¿Quieres calcular tu compra? </a>
+<a href="calculadora"> Calculadora </a>
 
 <jsp:include page="templates/footer.jsp"></jsp:include> 
 
